@@ -1,0 +1,13 @@
+# Sawmills Stock. No build step: the page is static, the functions are bundled by Netlify.
+[build]
+  publish = "public"
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/team"
+  to = "/.netlify/functions/team"
+  status = 200
